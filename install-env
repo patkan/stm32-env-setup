@@ -1,0 +1,23 @@
+ #!/bin/bash
+ 
+ #This script is written by Patrick Kanzler (patrick.kanzler@fablab.fau.de)
+ # It is released under GPL v2 (a license file should be in this directory)
+ # This is something between an installer and a memo for me, how to setup a STM32-dev-environment under Debian Jessie (I only tested it for this distribution, but it shold work for others too)
+ # Please handle with care! This installs software and might wreak havoc on your system. Think and read before you execute.
+ 
+ #official repositories contain gcc-arm-none-eabi, which prevents installation of launchpad version. Install pinning file (if this doesn't work, write the contents of the file into /etc/apt/preferences)
+ sudo cp launchpad-gcc-arm-none-eabi-1001 /etc/apt/preferences.d/
+ 
+ #add launchpad repository
+ sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded --yes
+ sudo cp terry_guo-gcc-arm-embedded-jessie.list /etc/apt/sources.list.d/
+ 
+ #update apt
+ sudo apt-get update
+ 
+ #purge potential remainders of the old compiler
+ sudo apt-get remove --purge gcc-arm-none-eabi binutils-arm-none-eabi --yes
+ 
+ #install new toolchain
+ sudo apt-get install gcc-arm-none-eabi --yes
+ 

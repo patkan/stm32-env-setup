@@ -1,0 +1,3 @@
+Package: gcc-arm-none-eabi
+Pin: origin "ppa.launchpad.net"
+Pin-Priority: 1001
