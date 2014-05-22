@@ -21,3 +21,16 @@
  #install new toolchain
  sudo apt-get install gcc-arm-none-eabi --yes
  
+ 
+ 
+ #TODO
+ #install texane into specified directory
+ #
+ #copy libs
+ #
+ #create template
+ #
+ #get config from setup.conf
+ #example in setup.conf.example --> steup.conf into .gitignore
+ #
+ #
