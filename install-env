@@ -26,7 +26,7 @@
  #TODO
  #install texane into specified directory (https://github.com/texane/stlink)
  #
- #copy libs
+ #copy libs (https://github.com/libopencm3/libopencm3)
  #
  #create template
  #
